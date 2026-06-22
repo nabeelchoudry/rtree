@@ -1,0 +1,17 @@
+{
+  "name": "Nearby Places",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // Automatically install extensions inside the container
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  },
+  // Ensure the container runs as a non-root user (provided by the base image)
+  "remoteUser": "vscode"
+}
